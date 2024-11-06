@@ -371,6 +371,7 @@ const SubscriptionPlan = () => {
                 ))}
               </ul>
               <Button
+                disabled={createSubscriptionPlanMutation.isPending}
                 onClick={() => {
                   createSubscriptionPlanMutation.mutate({
                     endorsely_referral,
@@ -384,7 +385,9 @@ const SubscriptionPlan = () => {
                 )}
               >
                 {/* <a href={plan.actionLink} className="w-full"> */}
-                {plan.actionText}
+                {createSubscriptionPlanMutation.isPending
+                  ? "Loading..."
+                  : plan.actionText}
                 {/* </a> */}
               </Button>
             </div>
