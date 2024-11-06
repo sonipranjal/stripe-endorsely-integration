@@ -32,6 +32,7 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     STRIPE_API_KEY: process.env.STRIPE_API_KEY,
     STRIPE_REDIRECT_URL: process.env.STRIPE_REDIRECT_URL,
+    DATABASE_URL: process.env.DATABASE_URL,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
