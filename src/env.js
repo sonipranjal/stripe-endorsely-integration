@@ -12,6 +12,7 @@ export const env = createEnv({
       .default("development"),
     STRIPE_API_KEY: z.string(),
     STRIPE_REDIRECT_URL: z.string(),
+    DATABASE_URL: z.string(),
   },
 
   /**
